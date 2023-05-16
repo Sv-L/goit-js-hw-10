@@ -24,7 +24,7 @@ module.exports = {
      output: {
         path: path.resolve(__dirname, './dist'),
          filename: 'bundle.js',
-    // publicPath: 'goit-js-hw-10',
+    publicPath: '/',
         // clean: true,
     },
      plugins: [
