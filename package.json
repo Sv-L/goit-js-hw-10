@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "hw10",
   "main": "index.js",
-  "homepage": "https://github.com/Sv-L/goit-js-hw-10#readme",
+  "homepage": "https://Sv-L.github.io/goit-js-hw-10/",
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
