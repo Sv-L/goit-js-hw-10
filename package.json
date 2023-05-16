@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sv-L/goit-js-hw-10"
+    "url": "git+Sv-L.git"
   },
   "keywords": [
     "webpack",
