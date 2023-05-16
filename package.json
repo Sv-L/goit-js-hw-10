@@ -1,0 +1,40 @@
+{
+  "name": "goit-js-hw-10",
+  "version": "1.0.0",
+  "description": "hw10",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sv-L/goit-js-hw-10.git"
+  },
+  "keywords": [
+    "webpack",
+    "js"
+  ],
+  "author": "Liulka S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sv-L/goit-js-hw-10/issues"
+  },
+  "homepage": "https://github.com/Sv-L/goit-js-hw-10#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "postcss-loader": "^7.3.0",
+    "postcss-preset-env": "^8.3.2",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
