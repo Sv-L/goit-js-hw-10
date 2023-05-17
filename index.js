@@ -203,7 +203,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ (() => {
-/******/ 	__webpack_require__.h = () => ("c013d19500eb23f2536d")
+/******/ 	__webpack_require__.h = () => ("400ca17b93ce61956927")
 /******/ })();
 /******/ 
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
@@ -663,7 +663,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 
 /******/ /* webpack/runtime/publicPath */
 /******/ (() => {
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/goit-js-hw-10/";
 /******/ })();
 /******/ 
 /******/ /* webpack/runtime/jsonp chunk loading */
