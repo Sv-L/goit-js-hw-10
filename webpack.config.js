@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: 'development',
@@ -24,7 +25,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js',
-    publicPath: '/goit-js-hw-10/',// для роботи локального серверу замінити на '/',  git: '/goit-js-hw-10/'
+     publicPath: isProduction ? '/goit-js-hw-10/' : '/',
     library: {
       type: 'module',
     },
