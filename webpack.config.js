@@ -24,8 +24,10 @@ module.exports = {
      output: {
         path: path.resolve(__dirname, './dist'),
          filename: 'index.js',
-    publicPath: '/goit-js-hw-10/',
-        // clean: true,
+         publicPath: '/goit-js-hw-10/',
+    library: {
+    type: 'module',
+  },
     },
      plugins: [
     new HtmlWebpackPlugin({
