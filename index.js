@@ -14,7 +14,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/styles.css */ \"./src/css/styles.css\");\n\nvar DEBOUNCE_DELAY = 300;\nconsole.log('hi');\nconsole.log('hi!!');\n\n//# sourceURL=webpack://goit-js-hw-10/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/styles.css */ \"./src/css/styles.css\");\n\nvar DEBOUNCE_DELAY = 300;\nconsole.log('hi');\nconsole.log('hooo!!');\n\n//# sourceURL=webpack://goit-js-hw-10/./src/index.js?");
 
 /***/ }),
 
@@ -203,7 +203,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ (() => {
-/******/ 	__webpack_require__.h = () => ("c7cb1d1c5148864c3a11")
+/******/ 	__webpack_require__.h = () => ("a41f5699fbfc4f022c60")
 /******/ })();
 /******/ 
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
