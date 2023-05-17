@@ -16,7 +16,7 @@ module.exports = {
     port: 8080,
     client: {
       logging: 'none',
-    },
+      },
   },
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
@@ -24,7 +24,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js',
-    publicPath: '/goit-js-hw-10/',
+    publicPath: '/',
     library: {
       type: 'module',
     },
