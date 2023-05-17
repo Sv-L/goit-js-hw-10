@@ -24,7 +24,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js',
-    publicPath: '/',
+    publicPath: '/goit-js-hw-10/',// для роботи локального серверу замінити на '/'
     library: {
       type: 'module',
     },
