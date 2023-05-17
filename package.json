@@ -1,18 +1,16 @@
 {
   "name": "goit-js-hw-10",
   "version": "1.0.0",
-  "description": "hw10",
+  "repository": {
+    "url": "git+https://github.com/Sv-L/goit-js-hw-10.git"
+  },
   "main": "index.js",
-  "homepage": "https://github.com/Sv-L/goit-js-hw-10",
   "scripts": {
-    "build": "webpack --mode=development",
+    "build": "webpack",
     "start": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
-  },
-  "repository": {
-    "url": "git+https://github.com/Sv-L/goit-js-hw-10.git"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "webpack",
