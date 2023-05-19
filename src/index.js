@@ -57,16 +57,16 @@ function handleError(error) {
 
 function createOneCountryMarkup(countriesArray) {
   const country = countriesArray[0];
-  const markupTitle = `<div class='wrap'>
+  const markupTitle = `<li class='wrap'>
         <img src ='${country.flags.svg}' width='30' height='20' />
         <h2>${country.name.official}</h2>
-      </div>`;
+      </li>`;
 
   const languagesAsString = Object.values(country.languages).join(', ');
-  const markupInfo = `
+  const markupInfo = `<li>
       <p><b>Capital:</b> ${country.capital}</p>
       <p><b>Population:</b> ${country.population}</p>
-      <p><b>Languages:</b> ${languagesAsString}</p>`;
+      <p><b>Languages:</b> ${languagesAsString}</p></li>`;
 
   countryListEl.innerHTML = markupTitle;
   countryInfoEl.innerHTML = markupInfo;
@@ -75,11 +75,9 @@ function createOneCountryMarkup(countriesArray) {
 function createCountryListItemMarkup(countries) {
   const countriesListMarkup = countries
     .map(
-      country => `<li>
-    <div class='wrap'>
+      country => `<li class='wrap'>
       <img src='${country.flags.svg}' width='30' height='20' />
       <p data-code='${country.ccn3}'>${country.name.official}</p>
-    </div>
   </li>
 `
     )
