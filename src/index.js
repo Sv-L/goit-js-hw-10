@@ -77,7 +77,7 @@ function createCountryListItemMarkup(countries) {
     .map(
       country => `<li class='wrap'>
       <img src='${country.flags.svg}' width='30' height='20' />
-      <p data-code='${country.ccn3}'>${country.name.official}</p>
+      <p>${country.name.official}</p>
   </li>
 `
     )
