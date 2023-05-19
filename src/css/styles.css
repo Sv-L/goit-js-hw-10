@@ -19,16 +19,20 @@ body {
   margin-bottom: 16px;
 }
 
-.country-list{
+.country-list {
   list-style: none;
 }
-.wrap{
+.wrap {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 10px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .country-info {
-margin-left: 40px;
+  margin-left: 40px;
 }

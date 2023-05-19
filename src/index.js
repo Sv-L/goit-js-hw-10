@@ -1,5 +1,10 @@
 import './css/styles.css';
-import { fetchCountries } from './fetchCountries';
+import { fetchCountryByName, fetchCountryByCode } from './fetchCountries';
+import {
+  createOneCountryTitleMarkup,
+  createOneCountryInfoMarkup,
+  createCountryListItemMarkup,
+} from './marcup';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import _ from 'lodash';
 
@@ -24,8 +29,7 @@ function onInputSearch(e) {
     clearMarkup();
     return;
   }
-
-  fetchCountries(search).then(renderCountryList).catch(handleError);
+  fetchCountryByName(search).then(renderCountryList).catch(handleError);
 }
 
 function renderCountryList(countries) {
@@ -37,10 +41,12 @@ function renderCountryList(countries) {
     return;
   }
   if (numberOfCountries === 1) {
-    createOneCountryMarkup(countries);
+    const country = countries[0];
+    createOneCountryMarkup(country);
   } else {
     clearMarkup();
-    createCountryListItemMarkup(countries);
+    countryListEl.innerHTML = createCountryListItemMarkup(countries);
+    countryListEl.addEventListener('click', onClickCountriesName);
   }
 }
 
@@ -55,34 +61,16 @@ function handleError(error) {
   Notify.failure('Oops, there is no country with that name.');
 }
 
-function createOneCountryMarkup(countriesArray) {
-  const country = countriesArray[0];
-  const markupTitle = `<div class='wrap'>
-        <img src ='${country.flags.svg}' width='30' height='20' />
-        <h2>${country.name.official}</h2>
-      </div>`;
-
-  const languagesAsString = Object.values(country.languages).join(', ');
-  const markupInfo = `
-      <p><b>Capital:</b> ${country.capital}</p>
-      <p><b>Population:</b> ${country.population}</p>
-      <p><b>Languages:</b> ${languagesAsString}</p>`;
-
-  countryListEl.innerHTML = markupTitle;
-  countryInfoEl.innerHTML = markupInfo;
+function createOneCountryMarkup(country) {
+  countryListEl.innerHTML = createOneCountryTitleMarkup(country);
+  countryInfoEl.innerHTML = createOneCountryInfoMarkup(country);
 }
 
-function createCountryListItemMarkup(countries) {
-  const countriesListMarkup = countries
-    .map(
-      country => `<li>
-    <div class='wrap'>
-      <img src='${country.flags.svg}' width='30' height='20' />
-      <p data-code='${country.ccn3}'>${country.name.official}</p>
-    </div>
-  </li>
-`
-    )
-    .join('');
-  countryListEl.innerHTML = countriesListMarkup;
+function onClickCountriesName(e) {
+  const liElement = e.target.closest('li');
+  if (!liElement) return;
+  const code = liElement.querySelector('p').dataset.code;
+  searchBoxEl.value = liElement.querySelector('p').textContent.trim();
+  fetchCountryByCode(code).then(createOneCountryMarkup).catch(handleError);
+  countryListEl.removeEventListener('click', onClickCountriesName);
 }
